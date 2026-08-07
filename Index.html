@@ -108,6 +108,18 @@
     pointer-events:none;
   }
   .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:70px; position:relative;}
+  .platform-badge{
+    display:inline-flex; align-items:center; gap:12px;
+    background:linear-gradient(90deg, rgba(34,211,184,0.14), rgba(124,58,237,0.14));
+    border:1px solid var(--line); border-radius:999px;
+    padding:12px 22px; margin-bottom:32px;
+    font-size:0.94rem; color:var(--paper); max-width:52ch;
+  }
+  .platform-badge em{font-style:normal; color:var(--teal); font-weight:600;}
+  .pb-dot{
+    flex-shrink:0; width:8px; height:8px; border-radius:50%;
+    background:var(--coral); box-shadow:0 0 10px var(--coral);
+  }
   .btn{
     font-family:var(--body); font-weight:600; font-size:0.95rem;
     padding:14px 26px; border-radius:9px; text-decoration:none;
@@ -126,7 +138,7 @@
 
   /* stack illustration — now a full-width horizontal strip under the hero copy */
   .stack-art{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; position:relative;
+    display:grid; grid-template-columns:repeat(5,1fr); gap:14px; position:relative;
   }
   .layer{
     border-radius:14px; padding:22px 20px; font-family:var(--mono); font-size:0.78rem;
@@ -145,6 +157,7 @@
   .layer-report{background:linear-gradient(135deg,#2b2650,#3a3468); color:var(--paper);}
   .layer-report .tag{color:var(--paper);}
   .layer-report .note{color:var(--muted);}
+  .layer-ai{background:linear-gradient(135deg,#f472b6,#fbb6d9);}
 
   @media (prefers-reduced-motion:no-preference){
     .layer{transition:transform .35s ease;}
@@ -169,6 +182,7 @@
   .row-support{--glow:var(--coral);}
   .row-reports{--glow:var(--violet-soft);}
   .row-db{--glow:#ffd166;}
+  .row-ai{--glow:#f472b6;}
 
   /* ---------- DEMO: stacked, chart over console ---------- */
   .demo-panel{
@@ -283,7 +297,11 @@
   <div class="wrap-wide">
     <p class="eyebrow">Full-stack software partner</p>
     <h1>We build software that fits the way <span class="accent">your business</span> actually works.</h1>
-    <p class="lede">Techworld Software Solution designs and ships tailored web applications end to end — interface, API, database, and the reporting layer that turns your data into decisions.</p>
+    <p class="lede">Techworld Software Solution designs and ships tailored web applications end to end — interface, API, database, reporting, and now the AI layer that automates what's left.</p>
+    <div class="platform-badge">
+      <span class="pb-dot"></span>
+      One idea. A web app <em>and</em> a mobile app that feel like they were built by the same person — because they were.
+    </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#contact">Start a project</a>
       <a class="btn btn-ghost" href="#demo">See the live demo ↓</a>
@@ -293,6 +311,7 @@
       <div class="layer layer-api"><span class="tag">API / SERVER</span><span class="note">what connects it</span></div>
       <div class="layer layer-db"><span class="tag">DATABASE / SQL</span><span class="note">where it lives</span></div>
       <div class="layer layer-report"><span class="tag">REPORTS</span><span class="note">what it means</span></div>
+      <div class="layer layer-ai"><span class="tag">AI / AUTOMATION</span><span class="note">what saves time</span></div>
     </div>
   </div>
 </section>
@@ -300,8 +319,8 @@
 <section class="band services band-pad" id="services">
   <div class="wrap">
     <p class="eyebrow coral">What we do</p>
-    <h2>Four services, one team.</h2>
-    <p class="section-head p">No handoffs between agencies. The people who build your app also maintain it, query it, and report on it.</p>
+    <h2>Five services, one team.</h2>
+    <p class="section-head p">No handoffs between agencies. The people who build your app also maintain it, query it, report on it — and now, automate it.</p>
 
     <div class="service-row row-fullstack">
       <div class="glyph" aria-hidden="true">{ }</div>
@@ -329,6 +348,13 @@
       <div>
         <h3>Database &amp; SQL Services</h3>
         <p>Efficient, scalable relational database design, plus tuning for slow or complex queries.</p>
+      </div>
+    </div>
+    <div class="service-row row-ai">
+      <div class="glyph" aria-hidden="true">✦</div>
+      <div>
+        <h3>AI Integration &amp; Automation</h3>
+        <p>Adding AI-powered features and workflow automation into your existing app or business processes — from chatbots to smart reporting.</p>
       </div>
     </div>
   </div>
